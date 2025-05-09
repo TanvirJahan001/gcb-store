@@ -1,15 +1,15 @@
-'use client';
 
-import styles from './page.module.css';
-import { motion } from 'framer-motion';
+
+import AnimatedElement from '@/components/AnimatedElement';
 
 export default function ShippingPage() {
   return (
     <main className={styles.main}>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+      <AnimatedElement
+        animation="fadeIn"
+        delay={0}
+        duration={0.5}
+        distance={20}
         className={styles.container}
       >
         <h1 className={styles.title}>Shipping Information</h1>
@@ -62,7 +62,7 @@ export default function ShippingPage() {
             </ul>
           </div>
         </section>
-      </motion.div>
+      </AnimatedElement>
     </main>
   );
 }

@@ -21,7 +21,7 @@ export default function About() {
           <section className={styles.section}>
             <h2>Our Mission</h2>
             <p>
-              At GCB Store, we're committed to making high-performance computing accessible to everyone. We believe that every customer deserves access to the best technology, expert advice, and reliable support throughout their computing journey.
+              At GCB Store, we&apos;re committed to making high-performance computing accessible to everyone. We believe that every customer deserves access to the best technology, expert advice, and reliable support throughout their computing journey.
             </p>
           </section>
 

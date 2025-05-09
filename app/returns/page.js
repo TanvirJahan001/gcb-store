@@ -1,15 +1,23 @@
 'use client';
-
-import styles from './page.module.css';
-import { motion } from 'framer-motion';
+import { useRef, useEffect } from 'react';
+import gsap from 'gsap';
 
 export default function ReturnsPage() {
+  const containerRef = useRef();
+
+  useEffect(() => {
+    gsap.from(containerRef.current, {
+      opacity: 0,
+      y: 20,
+      duration: 0.5,
+      ease: 'power2.out'
+    });
+  }, []);
+
   return (
     <main className={styles.main}>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+      <div
+        ref={containerRef}
         className={styles.container}
       >
         <h1 className={styles.title}>Returns Policy</h1>
@@ -62,7 +70,7 @@ export default function ReturnsPage() {
             </ul>
           </div>
         </section>
-      </motion.div>
+      </div>
     </main>
   );
 }

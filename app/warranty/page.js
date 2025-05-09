@@ -1,15 +1,23 @@
 'use client';
-
-import styles from './page.module.css';
-import { motion } from 'framer-motion';
+import { useRef, useEffect } from 'react';
+import gsap from 'gsap';
 
 export default function WarrantyPage() {
+  const containerRef = useRef();
+
+  useEffect(() => {
+    gsap.from(containerRef.current, {
+      opacity: 0,
+      y: 20,
+      duration: 0.5,
+      ease: 'power2.out'
+    });
+  }, []);
+
   return (
     <main className={styles.main}>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+      <div
+        ref={containerRef}
         className={styles.container}
       >
         <h1 className={styles.title}>Warranty Information</h1>
@@ -27,7 +35,7 @@ export default function WarrantyPage() {
         </section>
 
         <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>What's Covered</h2>
+          <h2 className={styles.sectionTitle}>What&apos;s Covered</h2>
           <div className={styles.content}>
             <p>Our warranty covers:</p>
             <ul className={styles.list}>
@@ -64,7 +72,7 @@ export default function WarrantyPage() {
             </ul>
           </div>
         </section>
-      </motion.div>
+      </div>
     </main>
   );
 }

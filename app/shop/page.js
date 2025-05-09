@@ -5,6 +5,7 @@ import styles from './page.module.css';
 import { products } from '../../data/products';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import Image from 'next/image';
 
 
 export default function Shop() {
@@ -237,7 +238,7 @@ export default function Shop() {
               {filteredProducts.map((product) => (
                 <div key={product.id} className={styles.productCard}>
                   <div className={styles.productImage}>
-                    <img src={product.image} alt={product.name} />
+                    <Image src={product.image} alt={product.name} />
                   </div>
                   <div className={styles.productInfo}>
                     <h3 className={styles.productName}>{product.name}</h3>
