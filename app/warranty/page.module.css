@@ -1,0 +1,83 @@
+.main {
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  margin-top: var(--header-height);
+}
+
+.container {
+  max-width: var(--max-width-lg);
+  margin: 0 auto;
+  background-color: var(--color-card-background);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl);
+  box-shadow: var(--shadow-md);
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-2xl);
+  text-align: center;
+  font-family: var(--font-urbanist);
+}
+
+.section {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
+  font-family: var(--font-urbanist);
+}
+
+.content {
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.content p {
+  margin-bottom: var(--spacing-md);
+}
+
+.list {
+  list-style-type: disc;
+  margin-left: var(--spacing-xl);
+  margin-bottom: var(--spacing-lg);
+}
+
+.list li {
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-muted);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: var(--spacing-xl);
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: var(--spacing-lg);
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.125rem;
+  }
+}

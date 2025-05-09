@@ -1,0 +1,117 @@
+.page {
+  padding-top: 4rem;
+}
+
+.contactContent {
+  padding: var(--spacing-xl) 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  color: var(--color-text);
+}
+
+.contactLayout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--spacing-xl);
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.infoCard {
+  background: var(--color-card-background);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.infoCard h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-primary);
+}
+
+.infoCard p {
+  color: var(--color-muted);
+  margin-bottom: var(--spacing-sm);
+}
+
+.contactForm {
+  background: var(--color-card-background);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.formGroup {
+  margin-bottom: var(--spacing-lg);
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: var(--spacing-sm);
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  transition: border-color var(--transition-normal);
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.errorInput {
+  border-color: var(--color-error) !important;
+}
+
+.errorText {
+  color: var(--color-error);
+  font-size: 0.875rem;
+  margin-top: var(--spacing-xs);
+  display: block;
+}
+
+.successMessage {
+  background: var(--color-success-light);
+  color: var(--color-success);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contactLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .contactContent {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+}

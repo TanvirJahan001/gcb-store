@@ -1,0 +1,234 @@
+.page {
+  padding-top: 4rem;
+}
+
+.shopLayout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: var(--spacing-xl);
+  padding: var(--spacing-xl) 0;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: sticky;
+  top: 5rem;
+  height: fit-content;
+  background: var(--color-background, #f8f9fa);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.filterSection {
+  margin-bottom: var(--spacing-xl);
+}
+
+.filterSection h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text);
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.filterLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--color-muted);
+  cursor: pointer;
+  transition: color var(--transition-normal);
+}
+
+.filterLabel:hover {
+  color: var(--color-text);
+}
+
+.filterLabel input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-primary);
+}
+
+/* Price Range Styles */
+.priceRange {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.rangeSlider {
+  width: 100%;
+  accent-color: var(--color-primary);
+}
+
+.priceInputs {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.priceInputs input {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+}
+
+/* Main Content Styles */
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.topFilters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-lg);
+  background: var(--color-card-background);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.searchBar {
+  flex: 1;
+}
+
+.searchInput {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-normal);
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.select {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-background);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: border-color var(--transition-normal);
+}
+
+.select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+/* Products Grid */
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.productCard {
+  background: var(--color-card-background);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal);
+}
+
+.productCard:hover {
+  transform: translateY(-5px);
+}
+
+.productImage {
+  position: relative;
+  aspect-ratio: 1;
+  background: var(--color-image-background, #f0f2f5);
+}
+
+.productImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.productInfo {
+  padding: var(--spacing-lg);
+}
+
+.productName {
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+}
+
+.productPrice {
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.productMeta {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-muted);
+  font-size: 0.875rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.loadMore {
+  text-align: center;
+  margin-top: var(--spacing-xl);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .productsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .shopLayout {
+    grid-template-columns: 240px 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .shopLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .topFilters {
+    flex-direction: column;
+  }
+
+  .searchBar,
+  .sortDropdown {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .productsGrid {
+    grid-template-columns: 1fr;
+  }
+}
