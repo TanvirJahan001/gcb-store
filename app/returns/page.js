@@ -1,6 +1,8 @@
 'use client';
 import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
+import styles from './page.module.css';
+
 
 export default function ReturnsPage() {
   const containerRef = useRef();

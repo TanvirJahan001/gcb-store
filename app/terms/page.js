@@ -1,6 +1,8 @@
 'use client';
 import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
+import styles from './page.module.css';
+
 
 export default function TermsPage() {
   const containerRef = useRef();
@@ -36,7 +38,7 @@ export default function TermsPage() {
             <ul className={styles.list}>
               <li>Modify or copy the materials</li>
               <li>Use the materials for any commercial purpose</li>
-              <li>Attempt to decompile or reverse engineer any software contained on GCB Store's website</li>
+              <li>Attempt to decompile or reverse engineer any software contained on GCB Store website</li>
               <li>Remove any copyright or other proprietary notations from the materials</li>
             </ul>
           </div>

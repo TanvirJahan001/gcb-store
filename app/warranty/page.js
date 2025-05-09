@@ -1,6 +1,7 @@
 'use client';
 import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
+import styles from './page.module.css';
 
 export default function WarrantyPage() {
   const containerRef = useRef();

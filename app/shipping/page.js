@@ -1,6 +1,7 @@
 
 
 import AnimatedElement from '@/components/AnimatedElement';
+import styles from './page.module.css';
 
 export default function ShippingPage() {
   return (
