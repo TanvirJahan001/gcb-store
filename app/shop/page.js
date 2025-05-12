@@ -238,7 +238,7 @@ export default function Shop() {
               {filteredProducts.map((product) => (
                 <div key={product.id} className={styles.productCard}>
                   <div className={styles.productImage}>
-                    <Image src={product.image} alt={product.name} />
+                    <Image src={product.image} alt={product.name} width={300} height={300} />
                   </div>
                   <div className={styles.productInfo}>
                     <h3 className={styles.productName}>{product.name}</h3>

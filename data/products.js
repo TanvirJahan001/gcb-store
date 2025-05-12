@@ -17,6 +17,23 @@ export const products = [
     }
   },
   {
+    id: 2,
+    name: "Intel Processor",
+    price: 32000,
+    image: "/images/Intel-Processor.png",
+    category: "CPU",
+    stock: 10,
+    rating: 4.8,
+    description: "8-core performance chip for high-end gaming and productivity.",
+    specs: {
+      cores: "8 Cores",
+      threads: "16 Threads",
+      baseSpeed: "3.8 GHz",
+      boostSpeed: "4.7 GHz",
+      cache: "32MB L3 Cache"
+    }
+  },
+  {
     id: 3,
     name: "SSD",
     price: 12000,
@@ -78,6 +95,70 @@ export const products = [
       efficiency: "80+ Gold",
       modular: "Fully Modular",
       fan: "135mm Silent"
+    }
+  },
+  {
+    id: 7,
+    name: "Keyboard",
+    price: 2500,
+    image: "/images/Keyboard.png",
+    category: "Peripherals",
+    stock: 30,
+    rating: 4.5,
+    description: "Mechanical RGB keyboard for gaming and productivity.",
+    specs: {
+      type: "Mechanical",
+      keys: "104",
+      backlight: "RGB",
+      connection: "Wired USB"
+    }
+  },
+  {
+    id: 8,
+    name: "Mouse",
+    price: 1800,
+    image: "/images/Mouse.png",
+    category: "Peripherals",
+    stock: 40,
+    rating: 4.4,
+    description: "Ergonomic gaming mouse with customizable DPI.",
+    specs: {
+      dpi: "16000",
+      buttons: "7",
+      connection: "Wired USB",
+      lighting: "RGB"
+    }
+  },
+  {
+    id: 9,
+    name: "Printer",
+    price: 12000,
+    image: "/images/Printer.png",
+    category: "Peripherals",
+    stock: 8,
+    rating: 4.2,
+    description: "All-in-one wireless color printer for home and office.",
+    specs: {
+      type: "Inkjet",
+      functions: "Print/Scan/Copy",
+      connectivity: "Wi-Fi, USB",
+      speed: "20 ppm"
+    }
+  },
+  {
+    id: 10,
+    name: "Desktop Monitor",
+    price: 22000,
+    image: "/images/Desktop-Monitor.png",
+    category: "Monitor",
+    stock: 12,
+    rating: 4.6,
+    description: "27-inch Full HD IPS monitor with ultra-thin bezels.",
+    specs: {
+      size: "27-inch",
+      resolution: "1920x1080",
+      refreshRate: "75Hz",
+      panel: "IPS"
     }
   }
 ];
